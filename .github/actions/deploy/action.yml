@@ -1,0 +1,10 @@
+name: 'Deploy'
+description: 'Deploy the project to GitHub Pages'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
