@@ -1,3 +1,4 @@
+import { useDocumentData } from '@/context/DocumentData'
 import {
   Page,
   Document as PdfDocument,
@@ -20,15 +21,19 @@ const styles = StyleSheet.create({
 })
 
 // Create Document Component
-export const Document = () => (
-  <PdfDocument>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text>Section #123</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View>
-    </Page>
-  </PdfDocument>
-)
+export const Document = () => {
+  const { title } = useDocumentData()
+  return (
+    <PdfDocument>
+      <Page size="A4" style={styles.page}>
+        <Text>{title}</Text>
+        <View style={styles.section}>
+          <Text>Section #123</Text>
+        </View>
+        <View style={styles.section}>
+          <Text>Section #2</Text>
+        </View>
+      </Page>
+    </PdfDocument>
+  )
+}
