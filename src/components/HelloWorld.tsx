@@ -1,3 +1,3 @@
 export const HelloWorld = () => {
-  return <h1>Hello World</h1>
+  return <h1 className="font-bold">Hello World</h1>
 }
