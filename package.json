@@ -18,6 +18,8 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@david.kucsai/react-pdf-table": "^0.4.1",
+    "@react-pdf/pdfkit": "^3.1.8",
     "@react-pdf/renderer": "^3.4.0",
     "clsx": "^2.1.0",
     "react": "^18.2.0",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^20.10.6",
+    "@types/pdfkit": "^0.13.4",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
